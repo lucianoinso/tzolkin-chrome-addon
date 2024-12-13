@@ -49,7 +49,9 @@ chrome.contextMenus.onClicked.addListener(async function (info, tab) {
             while (year < 1911) year += 52;
 
             if(day && month && year) {
-                let url = `https://www.13lunas.net/firmaGalacticaCompleta.html?`+
+                //let url = `https://www.13lunas.net/firmaGalacticaCompleta.html?`+
+                //          `nombre=Hoy&dia=${day}&mes=${month}&ano=${year}`;
+                let url = `https://www.13lunas.net/firmaGalacticaBasica.html?`+
                         `nombre=Hoy&dia=${day}&mes=${month}&ano=${year}`;
                 let newTab = await chrome.tabs.create({ url: url });
             } else {
